@@ -1,0 +1,23 @@
+.sidenav {
+    background-color: #1e699b;  
+}
+
+.sidenav .nav-list{
+    width: 160px;
+}
+
+.sidenav a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+ 
+}
+
+.sidenav i {
+    padding-right:5px;
+}
+
+.content {
+    padding: 10px;
+    background-color: #FFF;
+}

@@ -1,0 +1,17 @@
+.table {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.action {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.edit > i {
+   color: rgb(17, 17, 158)
+}
+
+.delete > i {
+    color: rgb(150, 46, 46);
+}

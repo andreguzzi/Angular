@@ -28,10 +28,10 @@ export class MovieUpdateComponent implements OnInit {
     private fb: FormBuilder
   ) { }
 
-  updateForm!: FormGroup;
+  updateForm: FormGroup|any;
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get("id")
+    const id:any = this.route.snapshot.paramMap.get("id")
 
     this.updateForm = this.fb.group({
       id: [""],

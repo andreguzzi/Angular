@@ -32,8 +32,8 @@ export class MovieCreateComponent implements OnInit {
   movie: Movie = {
     title: "",
     director: "",
-    year: "",
     generes: "",
+    year: "",
 
   };
 
@@ -44,7 +44,7 @@ export class MovieCreateComponent implements OnInit {
     private fb: FormBuilder
     ) { }
 
-  createForm: FormGroup;
+  createForm: FormGroup | any;
 
   ngOnInit(): void {
     this.createForm = this.fb.group({

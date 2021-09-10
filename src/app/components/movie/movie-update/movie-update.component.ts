@@ -26,12 +26,12 @@ export class MovieUpdateComponent implements OnInit {
     private movieService: MovieService,
     private sharedService: SharedService,
     private fb: FormBuilder
-  ) { }
+  ) {}
 
-  updateForm!: FormGroup;
+  updateForm: FormGroup|any;
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get("id")
+    const id:any = this.route.snapshot.paramMap.get("id")
 
     this.updateForm = this.fb.group({
       id: [""],
@@ -55,8 +55,8 @@ export class MovieUpdateComponent implements OnInit {
   updateMovie() {
     if (this.updateForm.valid) {
 
-      this.movieService.create(this.updateForm.value).subscribe(() => {
-        this.sharedService.showMessage("Filme adicionado com sucesso!");
+      this.movieService.update(this.updateForm.value).subscribe(() => {
+        this.sharedService.showMessage("Filme Alterado com sucesso!");
         this.router.navigate(["/movies"]);
       });
     }

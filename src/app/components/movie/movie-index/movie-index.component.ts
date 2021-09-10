@@ -14,7 +14,7 @@ export class MovieIndexComponent implements OnInit {
 
   movies: Movie[] = [];
 
-  displayedColumns: string[] = ['id', 'title', 'director', 'gerenes', 'year', 'actions'];
+  displayedColumns: string[] = ['id', 'title', 'director', 'generes', 'year', 'actions'];
 
   constructor(
     private movieService: MovieService,
@@ -28,6 +28,7 @@ export class MovieIndexComponent implements OnInit {
   }
 
   updateMovies() {
+
     this.movieService.index().subscribe(movies => {
       this.movies = movies;
     });

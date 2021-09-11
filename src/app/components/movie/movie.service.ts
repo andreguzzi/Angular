@@ -1,17 +1,20 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { EMPTY, Observable } from 'rxjs';
-import { catchError, map } from 'rxjs/operators'
-import { Movie } from './movie.model';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { EMPTY, Observable } from "rxjs";
+import { catchError, map } from "rxjs/operators";
+import { Movie } from "./movie.model";
 
-import { API } from '../../app.api';
-import { SharedService } from '../shared/shared.service';
+import { API } from "../../app.api";
+import { SharedService } from "../shared/shared.service";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class MovieService {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 37567f603467cf66a1b2b7799de36dcbd1c8e382
   constructor(private http: HttpClient, private sharedService: SharedService) {}
 
   handleError(error: any): Observable<any> {
@@ -53,7 +56,6 @@ export class MovieService {
       map((obj) => obj),
       catchError((e) => this.handleError(e))
     );
-
   }
 
   delete(id: number|any): Observable<Movie> {
@@ -62,6 +64,5 @@ export class MovieService {
       map((obj) => obj),
       catchError((e) => this.handleError(e))
     );
-
   }
 }

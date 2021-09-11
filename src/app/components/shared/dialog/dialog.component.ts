@@ -1,20 +1,26 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, Inject, OnInit } from "@angular/core";
+import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
 
 @Component({
-  selector: 'app-dialog',
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.css']
+  selector: "app-dialog",
+  templateUrl: "./dialog.component.html",
+  styleUrls: ["./dialog.component.css"],
 })
 export class DialogComponent implements OnInit {
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    public dialogRef: MatDialogRef<DialogComponent>
+  ) {}
 
+<<<<<<< HEAD
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any, 
     public dialogRef: MatDialogRef<DialogComponent>
     ){}
   
+=======
+>>>>>>> 37567f603467cf66a1b2b7799de36dcbd1c8e382
   ngOnInit(): void {
     this.dialogRef.close(false);
   }
-
 }

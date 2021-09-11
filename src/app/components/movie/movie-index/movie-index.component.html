@@ -1,54 +1,33 @@
-<table mat-table [dataSource]="movies" class=" table mat-elevation-z8">
+<table mat-table [dataSource]="movies" class="table mat-elevation-z8">
 
  <!-- Id Column -->
 <ng-container matColumnDef="id">
     <th mat-header-cell *matHeaderCellDef> Id. </th>
-<<<<<<< HEAD
     <td mat-cell *matCellDef="let movie"> {{movie.id}} </td>
-=======
-    <td mat-cell *matCellDef="let movie"> {{movie.position}} </td>
->>>>>>> 37567f603467cf66a1b2b7799de36dcbd1c8e382
   </ng-container>
 
   <!-- Title Column -->
   <ng-container matColumnDef="title">
     <th mat-header-cell *matHeaderCellDef> Título </th>
-<<<<<<< HEAD
     <td mat-cell *matCellDef="let movie"> {{movie.title}} </td>
-=======
-    <td mat-cell *matCellDef="let movie"> {{movie.name}} </td>
->>>>>>> 37567f603467cf66a1b2b7799de36dcbd1c8e382
   </ng-container>
 
   <!-- Director Column -->
   <ng-container matColumnDef="director">
     <th mat-header-cell *matHeaderCellDef> Diretor(es) </th>
-<<<<<<< HEAD
     <td mat-cell *matCellDef="let movie"> {{movie.director}} </td>
-=======
-    <td mat-cell *matCellDef="let movie"> {{movie.weight}} </td>
->>>>>>> 37567f603467cf66a1b2b7799de36dcbd1c8e382
   </ng-container>
 
   <!-- Generes Column  -->
   <ng-container matColumnDef="generes">
-<<<<<<< HEAD
-    <th mat-header-cell *matHeaderCellDef> Genero(s) </th>
-    <td mat-cell *matCellDef="let movie"> {{movie.generes}} </td>
-=======
     <th mat-header-cell *matHeaderCellDef> Gênero(s) </th>
-    <td mat-cell *matCellDef="let movie"> {{movie.symbol}} </td>
->>>>>>> 37567f603467cf66a1b2b7799de36dcbd1c8e382
+    <td mat-cell *matCellDef="let movie"> {{movie.generes}} </td>
   </ng-container>
 
    <!-- Year Column -->
    <ng-container matColumnDef="year">
     <th mat-header-cell *matHeaderCellDef> Ano </th>
-<<<<<<< HEAD
     <td mat-cell *matCellDef="let movie"> {{movie.year}} </td>
-=======
-    <td mat-cell *matCellDef="let movie"> {{movie.symbol}} </td>
->>>>>>> 37567f603467cf66a1b2b7799de36dcbd1c8e382
   </ng-container>
 
   <!-- Actions Column -->
@@ -60,9 +39,9 @@
             <i class="material-icons">edit</i>
         </a>
 
-        <a routerLink="/movies/delete/{{movie.id}}" class="action delete">
+        <span (click)="onDelete(movie.id)" class="action delete">
             <i class="material-icons">delete</i>
-        </a>
+        </span>
 
     </td>
   </ng-container>

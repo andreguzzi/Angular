@@ -3,7 +3,6 @@ import { MovieService } from './../movie.service';
 import { Component, OnInit } from '@angular/core';
 import { DialogService } from '../../shared/dialog.service';
 import { SharedService } from '../../shared/shared.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-index',
@@ -20,7 +19,7 @@ export class MovieIndexComponent implements OnInit {
     private movieService: MovieService,
     private dialogService: DialogService,
     private sharedService: SharedService,
-    
+
   ) { }
 
   ngOnInit(): void {
@@ -28,22 +27,25 @@ export class MovieIndexComponent implements OnInit {
   }
 
   updateMovies() {
-
-    this.movieService.index().subscribe(movies => {
+    this.movieService.index().subscribe((movies) => {
       this.movies = movies;
     });
+
   }
 
   onDelete(id: any) {
-    this.dialogService.openConfirmDialog('Tem certeza que deseja remover este filme?')
-      .afterClosed().subscribe(res => {
+
+    this.dialogService
+      .opendConfirmDialog('Tem certeza que deseja remover este filme?')
+      .afterClosed()
+      .subscribe((res) => {
         if (res) {
           this.movieService.delete(id).subscribe(() => {
-            this.sharedService.showMessage('Filme Removido com sucesso!');
+            this.sharedService.showMessage("Filme Removido com sucesso!");
             this.updateMovies();
+
           });
         }
       });
   }
-
 }

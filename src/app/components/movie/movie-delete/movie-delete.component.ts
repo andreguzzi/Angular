@@ -22,7 +22,6 @@ export class MovieDeleteComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private movieService: MovieService,
-<<<<<<< HEAD
     private sharedService: SharedService,
   
   ) {}
@@ -35,26 +34,6 @@ export class MovieDeleteComponent implements OnInit {
 
       });
 
-=======
-    private sharedService: SharedService
-  ) {}
-
-  ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get("id");
-
-    this.movieService.getById("id").subscribe((movie) => {
-      this.movie = movie;
-    });
-  }
-
-  updateMovie(): void {}
-
-  deleteMovie(): void {
-    this.movieService.delete(this.movie.id).subscribe(() => {
-      this.sharedService.showMessage("Filme Removido com sucesso!");
-      this.router.navigate(["/movies"]);
-    });
->>>>>>> 37567f603467cf66a1b2b7799de36dcbd1c8e382
   }
   deleteMovie(): void {
 

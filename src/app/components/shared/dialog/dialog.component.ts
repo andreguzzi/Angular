@@ -12,14 +12,6 @@ export class DialogComponent implements OnInit {
     public dialogRef: MatDialogRef<DialogComponent>
   ) {}
 
-<<<<<<< HEAD
-  constructor(
-    @Inject(MAT_DIALOG_DATA) public data: any, 
-    public dialogRef: MatDialogRef<DialogComponent>
-    ){}
-  
-=======
->>>>>>> 37567f603467cf66a1b2b7799de36dcbd1c8e382
   ngOnInit(): void {
     this.dialogRef.close(false);
   }

@@ -44,11 +44,8 @@ export class MovieCreateComponent implements OnInit {
     private fb: FormBuilder
     ) { }
 
-<<<<<<< HEAD
+
   createForm: FormGroup | any;
-=======
-  createForm: FormGroup|any;
->>>>>>> 37567f603467cf66a1b2b7799de36dcbd1c8e382
 
   ngOnInit(): void {
     this.createForm = this.fb.group({

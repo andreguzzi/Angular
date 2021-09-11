@@ -11,10 +11,6 @@ import { SharedService } from "../shared/shared.service";
   providedIn: "root",
 })
 export class MovieService {
-<<<<<<< HEAD
-
-=======
->>>>>>> 37567f603467cf66a1b2b7799de36dcbd1c8e382
   constructor(private http: HttpClient, private sharedService: SharedService) {}
 
   handleError(error: any): Observable<any> {

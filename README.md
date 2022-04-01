@@ -2,6 +2,10 @@
 
 Crud Movies and Series, form validations.
 
+![image](https://user-images.githubusercontent.com/52809806/161173053-f672c049-bb7a-4c92-b635-a307f767a1d9.png)
+
+to run, download https://github.com/andreguzzi/Angular-Backend, npm start
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
 
 ## Development server
